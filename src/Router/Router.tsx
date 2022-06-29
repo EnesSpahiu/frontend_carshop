@@ -4,11 +4,12 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import AboutUs from "../pages/AboutUs";
+import ContactUs from "../pages/ContactUs";
 import Home from "../pages/Home";
 import LoginPage from "../pages/LoginPage";
 
 const Router = () => {
-
   return (
     <Routes>
       <Route
@@ -16,6 +17,8 @@ const Router = () => {
         element={<Home />}
       />
       <Route path={"/login"} element={<LoginPage />} />
+      <Route path={"/aboutus"} element={<AboutUs />} />
+      <Route path={"/contactus"} element={<ContactUs />} />
     </Routes>
   );
 };

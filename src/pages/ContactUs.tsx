@@ -1,25 +1,28 @@
+import { Container, Grid } from "@mui/material";
+import { Formik, Field, ErrorMessage } from "formik";
 import React from "react";
-import { Formik, Field, Form, ErrorMessage } from "formik";
+import { Form } from "react-bootstrap";
 import * as Yup from "yup";
-import { Container } from "react-bootstrap";
 import Navbar from "../organisms/Navbar/Navbar";
 
-export default function LoginPage() {
+export default function ContactUs() {
   const validationSchema = () => {
     return Yup.object().shape({
-      email: Yup.string().email().required("This field is required"),
-      password: Yup.string().required("This field is required"),
+      firstName: Yup.string().required("This field is required"),
+      lastName: Yup.string().required("This field is required"),
+      message: Yup.string().required("This field is required"),
     });
   };
 
   const initialValues = {
-    email: "",
-    password: "",
+    firstName: "",
+    lastName: "",
+    message: "",
   };
 
   return (
     <>
-      <Navbar site="Login"/>
+      <Navbar site="Contact us" />
       <Container
         style={{ justifyContent: "center", display: "flex", paddingTop: "10%" }}
       >
@@ -33,7 +36,7 @@ export default function LoginPage() {
           <Form style={{ backgroundColor: "turquoise" }}>
             <div className="form-group">
               <Field
-                name="email"
+                name="firstName"
                 type="text"
                 className="form-control"
                 style={{
@@ -42,10 +45,10 @@ export default function LoginPage() {
                   margin: "20px",
                   borderRadius: "10px",
                 }}
-                placeholder="E-Mail"
+                placeholder="First name: "
               />
               <ErrorMessage
-                name="email"
+                name="firstName"
                 component="div"
                 className="alert alert-danger"
               />
@@ -53,8 +56,8 @@ export default function LoginPage() {
 
             <div className="form-group">
               <Field
-                name="password"
-                type="password"
+                name="lastName"
+                type="text"
                 className="form-control"
                 style={{
                   width: "200px",
@@ -62,10 +65,30 @@ export default function LoginPage() {
                   margin: "20px",
                   borderRadius: "10px",
                 }}
-                placeholder="Password"
+                placeholder="Last name: "
               />
               <ErrorMessage
-                name="password"
+                name="lastName"
+                component="div"
+                className="alert alert-danger"
+              />
+            </div>
+
+            <div className="form-group">
+            <Field
+                name="textfield"
+                className="form-control"
+                as="textarea"
+                style={{
+                  width: "200px",
+                  height: "30px",
+                  margin: "20px",
+                  borderRadius: "10px",
+                }}
+                placeholder="Message: "
+              />
+              <ErrorMessage
+                name="textfield"
                 component="div"
                 className="alert alert-danger"
               />

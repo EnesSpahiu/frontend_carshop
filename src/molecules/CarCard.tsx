@@ -10,7 +10,7 @@ import { CarType } from '../types/Car.model';
 export default function CarCard(props: CarType) {
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card style={{width: "300px", marginLeft: "15px", marginRight: "15px"}}>
       <CardMedia
         component="img"
         alt="green iguana"
