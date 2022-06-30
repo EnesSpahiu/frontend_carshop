@@ -1,16 +1,16 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import { CarType } from '../types/Car.model';
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import { CarType } from "../../types/Car.model";
+import "./CarCard.css"
 
 export default function CarCard(props: CarType) {
-
   return (
-    <Card style={{width: "300px", marginLeft: "15px", marginRight: "15px"}}>
+    <Card className="card">
       <CardMedia
         component="img"
         alt="green iguana"
@@ -29,7 +29,7 @@ export default function CarCard(props: CarType) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" >More</Button>
+        <Button size="small">More</Button>
       </CardActions>
     </Card>
   );

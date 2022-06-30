@@ -25,14 +25,28 @@ export default function Slider() {
         pagination={{
           clickable: true,
         }}
-
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide><img src="https://images.ichkoche.at/data/image/variations/250x167/1/apfel-img-9270.jpg" style={{width: "400px"}}/></SwiperSlide>
-        <SwiperSlide><img src="https://images.ichkoche.at/data/image/variations/250x167/1/apfel-img-9270.jpg" style={{width: "400px"}}/></SwiperSlide>
-        <SwiperSlide><img src="https://images.ichkoche.at/data/image/variations/250x167/1/apfel-img-9270.jpg" style={{width: "400px"}}/></SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://images.ichkoche.at/data/image/variations/250x167/1/apfel-img-9270.jpg"
+            style={{ width: "400px" }}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://images.ichkoche.at/data/image/variations/250x167/1/apfel-img-9270.jpg"
+            style={{ width: "400px" }}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://images.ichkoche.at/data/image/variations/250x167/1/apfel-img-9270.jpg"
+            style={{ width: "400px" }}
+          />
+        </SwiperSlide>
       </Swiper>
     </>
   );

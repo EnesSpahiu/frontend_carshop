@@ -1,13 +1,10 @@
-import React from "react";
-import { Col, Row } from "react-bootstrap";
-import CarCard from "../molecules/CarCard/CarCard";
-import Slider from "../molecules/Slider/Slider";
-import Navbar from "../organisms/Navbar/Navbar";
-import Container from "react-bootstrap/Container";
 import { Grid } from "@mui/material";
+import React from "react";
+import CarCard from "../molecules/CarCard/CarCard";
+import Navbar from "../organisms/Navbar/Navbar";
 
-export default function Home() {
-
+export default function Shop() {
+  
   const dummyData = [
     {
       description: "Test",
@@ -42,9 +39,6 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <br />
-      <Slider />
-
       <Grid
         container
         spacing={3}

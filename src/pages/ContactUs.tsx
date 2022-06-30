@@ -1,4 +1,4 @@
-import { Container, Grid } from "@mui/material";
+import { Container, Grid, Paper } from "@mui/material";
 import { Formik, Field, ErrorMessage } from "formik";
 import React from "react";
 import { Form } from "react-bootstrap";
@@ -21,8 +21,8 @@ export default function ContactUs() {
   };
 
   return (
-    <>
-      <Navbar site="Contact us" />
+    <div>
+      <Navbar />
       <Container
         style={{ justifyContent: "center", display: "flex", paddingTop: "10%" }}
       >
@@ -33,91 +33,104 @@ export default function ContactUs() {
             /* TODO: LOGIN METHOD*/
           }}
         >
-          <Form style={{ backgroundColor: "turquoise" }}>
-            <div className="form-group">
-              <Field
-                name="firstName"
-                type="text"
-                className="form-control"
-                style={{
-                  width: "200px",
-                  height: "30px",
-                  margin: "20px",
-                  borderRadius: "10px",
-                }}
-                placeholder="First name: "
-              />
-              <ErrorMessage
-                name="firstName"
-                component="div"
-                className="alert alert-danger"
-              />
-            </div>
+          <Paper
+            elevation={12}
+            style={{
+              backgroundColor: "#bfbfbf",
+              padding: "50px",
+              borderRadius: "20px",
+            }}
+          >
+            <Form>
+              <div className="form-group">
+                <Field
+                  name="firstName"
+                  type="text"
+                  className="form-control"
+                  style={{
+                    width: "200px",
+                    height: "50px",
+                    margin: "20px",
+                    borderRadius: "10px",
+                  }}
+                  placeholder="First name: "
+                />
+                <ErrorMessage
+                  name="firstName"
+                  component="div"
+                  className="alert alert-danger"
+                />
+              </div>
 
-            <div className="form-group">
-              <Field
-                name="lastName"
-                type="text"
-                className="form-control"
-                style={{
-                  width: "200px",
-                  height: "30px",
-                  margin: "20px",
-                  borderRadius: "10px",
-                }}
-                placeholder="Last name: "
-              />
-              <ErrorMessage
-                name="lastName"
-                component="div"
-                className="alert alert-danger"
-              />
-            </div>
+              <div className="form-group">
+                <Field
+                  name="lastName"
+                  type="text"
+                  className="form-control"
+                  style={{
+                    width: "200px",
+                    height: "50px",
+                    margin: "20px",
+                    borderRadius: "10px",
+                  }}
+                  placeholder="Last name: "
+                />
+                <ErrorMessage
+                  name="lastName"
+                  component="div"
+                  className="alert alert-danger"
+                />
+              </div>
 
-            <div className="form-group">
-            <Field
-                name="textfield"
-                className="form-control"
-                as="textarea"
-                style={{
-                  width: "200px",
-                  height: "30px",
-                  margin: "20px",
-                  borderRadius: "10px",
-                }}
-                placeholder="Message: "
-              />
-              <ErrorMessage
-                name="textfield"
-                component="div"
-                className="alert alert-danger"
-              />
-            </div>
+              <div className="form-group">
+                <Field
+                  name="textfield"
+                  className="form-control"
+                  as="textarea"
+                  style={{
+                    width: "200px",
+                    height: "200px",
+                    margin: "20px",
+                    borderRadius: "10px",
+                  }}
+                  placeholder="Message: "
+                />
+                <ErrorMessage
+                  name="textfield"
+                  component="div"
+                  className="alert alert-danger"
+                />
+              </div>
 
-            <div
-              className="form-group"
-              style={{ display: "flex", justifyContent: "space-evenly" }}
-            >
-              <button
-                type="submit"
-                className="btn btn-primary btn-block"
-                style={{
-                  width: "100px",
-                  height: "30px",
-                  marginBottom: "15px",
-                  borderRadius: "10px",
-                }}
+              <div
+                className="form-group"
+                style={{ display: "flex", justifyContent: "space-evenly" }}
               >
-                <span className="spinner-border spinner-border-sm"></span>
-                <span>Login</span>
-              </button>
-            </div>
-            <div className="form-group">
-              <div className="alert alert-danger" role="alert"></div>
-            </div>
-          </Form>
+                <button
+                  type="submit"
+                  className="btn btn-primary btn-block"
+                  style={{
+                    width: "100px",
+                    height: "40px",
+                    marginBottom: "15px",
+                    borderRadius: "10px",
+                    background: "#1890ff",
+                    border: "1px solid black",
+                    boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.3)",
+                    cursor: "pointer",
+                  }}
+                >
+                  <span className="spinner-border spinner-border-sm"></span>
+                  <span>Submit</span>
+                </button>
+              </div>
+              <div className="form-group">
+                <div className="alert alert-danger" role="alert"></div>
+              </div>
+            </Form>
+          </Paper>
         </Formik>
       </Container>
-    </>
+    </div>
   );
 }

@@ -7,7 +7,9 @@ import {
 import AboutUs from "../pages/AboutUs";
 import ContactUs from "../pages/ContactUs";
 import Home from "../pages/Home";
-import LoginPage from "../pages/LoginPage";
+import Shop from "../pages/Shop";
+import SignIn from "../pages/SignIn";
+import SignUp from "../pages/SignUp";
 
 const Router = () => {
   return (
@@ -16,9 +18,11 @@ const Router = () => {
         path={"/"}
         element={<Home />}
       />
-      <Route path={"/login"} element={<LoginPage />} />
-      <Route path={"/aboutus"} element={<AboutUs />} />
-      <Route path={"/contactus"} element={<ContactUs />} />
+      <Route path={"/login"} element={<SignUp />} />
+      <Route path={"/about-us"} element={<AboutUs />} />
+      <Route path={"/contact-us"} element={<ContactUs />} />
+      <Route path={"/signin"} element={<SignIn />} />
+      <Route path={"/shop"} element={<Shop />} />
     </Routes>
   );
 };
