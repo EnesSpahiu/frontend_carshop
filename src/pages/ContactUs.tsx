@@ -24,7 +24,7 @@ export default function ContactUs() {
     <div>
       <Navbar />
       <Container
-        style={{ justifyContent: "center", display: "flex", paddingTop: "10%" }}
+        style={{ justifyContent: "center", display: "flex", paddingTop: "2%" }}
       >
         <Formik
           initialValues={initialValues}

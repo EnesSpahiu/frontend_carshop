@@ -17,7 +17,7 @@ import * as React from "react";
 import "./NavbarStyle.css";
 
 const pages = ["", "shop", "about-us", "contact-us"];
-const settings = ["Profile", "Register", "Login", "Logout"];
+const settings = ["Profile", "Sign-In", "Sign-Up", "Logout"];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
