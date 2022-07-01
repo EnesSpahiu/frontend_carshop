@@ -81,7 +81,7 @@ export default function SignInSide() {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Sign up
+              Sign in
             </Typography>
             <Box
               component="form"
@@ -119,7 +119,7 @@ export default function SignInSide() {
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
-                Sign Up
+                Sign in
               </Button>
               <Copyright sx={{ mt: 5 }} />
             </Box>

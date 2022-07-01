@@ -80,7 +80,7 @@ export default function SignUpSide() {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Sign in
+              Sign up
             </Typography>
             <Box
               component="form"
@@ -118,7 +118,7 @@ export default function SignUpSide() {
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
-                Sign In
+                Sign Up
               </Button>
               <Grid container>
                 <Grid item xs>
@@ -128,7 +128,7 @@ export default function SignUpSide() {
                 </Grid>
                 <Grid item>
                   <Link href="/signin" variant="body2">
-                    {"Don't have an account? Sign Up"}
+                    {"Don't have an account? Sign In"}
                   </Link>
                 </Grid>
               </Grid>

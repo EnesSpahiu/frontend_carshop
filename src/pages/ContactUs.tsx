@@ -37,7 +37,10 @@ export default function ContactUs() {
             elevation={12}
             style={{
               backgroundColor: "#bfbfbf",
-              padding: "50px",
+              paddingLeft: "calc(10% + 5px)",
+              paddingRight: "10%",
+              paddingTop: "5%",
+              paddingBottom: "5%",
               borderRadius: "20px",
             }}
           >
@@ -48,10 +51,13 @@ export default function ContactUs() {
                   type="text"
                   className="form-control"
                   style={{
-                    width: "200px",
+                    width: "250px",
                     height: "50px",
                     margin: "20px",
                     borderRadius: "10px",
+                    paddingLeft: "5px",
+                    border: "0px",
+                    boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.3)",
                   }}
                   placeholder="First name: "
                 />
@@ -68,10 +74,13 @@ export default function ContactUs() {
                   type="text"
                   className="form-control"
                   style={{
-                    width: "200px",
+                    width: "250px",
                     height: "50px",
                     margin: "20px",
                     borderRadius: "10px",
+                    paddingLeft: "5px",
+                    border: "0px",
+                    boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.3)",
                   }}
                   placeholder="Last name: "
                 />
@@ -88,10 +97,13 @@ export default function ContactUs() {
                   className="form-control"
                   as="textarea"
                   style={{
-                    width: "200px",
+                    width: "250px",
                     height: "200px",
                     margin: "20px",
                     borderRadius: "10px",
+                    paddingLeft: "5px",
+                    border: "0px",
+                    boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.3)",
                   }}
                   placeholder="Message: "
                 />
@@ -110,7 +122,7 @@ export default function ContactUs() {
                   type="submit"
                   className="btn btn-primary btn-block"
                   style={{
-                    width: "100px",
+                    width: "150px",
                     height: "40px",
                     marginBottom: "15px",
                     borderRadius: "10px",

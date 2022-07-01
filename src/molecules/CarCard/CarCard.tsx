@@ -6,7 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { CarType } from "../../types/Car.model";
-import "./CarCard.css"
+import "./CarCard.css";
 
 export default function CarCard(props: CarType) {
   return (
@@ -29,7 +29,9 @@ export default function CarCard(props: CarType) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">More</Button>
+        <Button size="small" href={"/shop/" + props.id}>
+          More
+        </Button>
       </CardActions>
     </Card>
   );

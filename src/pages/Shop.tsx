@@ -4,7 +4,6 @@ import CarCard from "../molecules/CarCard/CarCard";
 import Navbar from "../organisms/Navbar/Navbar";
 
 export default function Shop() {
-  
   const dummyData = [
     {
       description: "Test",
@@ -42,11 +41,22 @@ export default function Shop() {
       <Grid
         container
         spacing={3}
-        style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "20px",
+          paddingLeft: "10%",
+          paddingRight: "10%",
+        }}
       >
         {dummyData.map((card) => {
           return (
-            <Grid item sm={6} md={3} style={{display: "flex", justifyContent: "center"}}>
+            <Grid
+              item
+              sm={6}
+              md={3}
+              style={{ display: "flex", justifyContent: "center" }}
+            >
               <CarCard
                 description={card.description}
                 name={card.name}

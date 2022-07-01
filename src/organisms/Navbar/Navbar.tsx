@@ -42,7 +42,7 @@ const Navbar = () => {
   return (
     <AppBar position="static" className="muiNavbar">
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters >
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"

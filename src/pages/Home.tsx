@@ -9,28 +9,32 @@ import { Grid, Typography } from "@mui/material";
 export default function Home() {
   const dummyData = [
     {
-      description: "Test",
+      id: "1",
+      description: "Test1",
       name: "Test Test",
       picture_url:
         "https://images.ichkoche.at/data/image/variations/250x167/1/apfel-img-9270.jpg",
       price: 120,
     },
     {
-      description: "Test",
+      id: "2",
+      description: "Test2",
       name: "Test Test",
       picture_url:
         "https://images.ichkoche.at/data/image/variations/250x167/1/apfel-img-9270.jpg",
       price: 120,
     },
     {
-      description: "Test",
+      id: "3",
+      description: "Test3",
       name: "Test Test",
       picture_url:
         "https://images.ichkoche.at/data/image/variations/250x167/1/apfel-img-9270.jpg",
       price: 120,
     },
     {
-      description: "Test",
+      id: "4",
+      description: "Test4",
       name: "Test Test",
       picture_url:
         "https://images.ichkoche.at/data/image/variations/250x167/1/apfel-img-9270.jpg",
@@ -42,13 +46,15 @@ export default function Home() {
     <>
       <Navbar />
       <br />
-      <Slider />
 
       <Grid
         container
         spacing={3}
-        style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}
+        style={{ display: "flex", justifyContent: "center", marginTop: "20px",
+        paddingLeft: "10%",
+        paddingRight: "10%", }}
       >
+        <Slider />
         <Grid
           item
           sm={12}
@@ -65,6 +71,7 @@ export default function Home() {
               style={{ display: "flex", justifyContent: "center" }}
             >
               <CarCard
+                id={card.id}
                 description={card.description}
                 name={card.name}
                 picture_url={card.picture_url}
@@ -77,11 +84,11 @@ export default function Home() {
           container
           style={{ display: "flex", justifyContent: "center", marginTop: "2%" }}
         >
-          <Grid item>
+          <Grid item sm={12}>
             <Typography variant="h4" style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}>About our cars</Typography>
             <hr />
           </Grid>
-          <Grid item sm={8} style={{ marginTop: "2%" }}>
+          <Grid item sm={9} style={{ marginTop: "2%" }}>
             <Typography variant="body2">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -131,52 +138,7 @@ export default function Home() {
               rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum
               dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
               elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-              magna aliquyam erat. Consetetur sadipscing elitr, sed diam nonumy
-              eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-              sed diam voluptua. At vero eos et accusam et justo duo dolores et
-              ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-              Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-              sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-              et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-              accusam et justo duo dolores et ea rebum. Stet clita kasd
-              gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-              sanctus. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-              sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-              aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-              duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-              takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor
-              sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-              tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-              dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-              elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-              magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-              justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-              takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel
-              eum iriure dolor in hendrerit in vulputate velit esse molestie
-              consequat, vel illum dolore eu feugiat nulla facilisis at vero
-              eros et accumsan et iusto odio dignissim qui blandit praesent
-              luptatum zzril delenit augue duis dolore te feugait nulla
-              facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing
-              elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-              magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-              nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-              aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor
-              in hendrerit in vulputate velit esse molestie consequat, vel illum
-              dolore eu feugiat nulla facilisis at vero eros et accumsan et
-              iusto odio dignissim qui blandit praesent luptatum zzril delenit
-              augue duis dolore te feugait nulla facilisi. Nam liber tempor cum
-              soluta nobis eleifend option congue nihil imperdiet doming id quod
-              mazim placerat facer possim assum. Lorem ipsum dolor sit amet,
-              consectetuer adipiscing elit, sed diam nonummy nibh euismod
-              tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-              enim ad minim veniam, quis nostrud exerci tation ullamcorper
-              suscipit lobortis nisl ut aliquip ex ea commodo
+              magna aliquyam erat. 
             </Typography>
           </Grid>
         </Grid>
