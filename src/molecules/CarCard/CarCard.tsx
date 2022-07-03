@@ -10,11 +10,11 @@ import "./CarCard.css";
 
 export default function CarCard(props: CarType) {
   return (
-    <Card className="card">
+    <Card className="card" >
       <CardMedia
         component="img"
         alt="green iguana"
-        height="140"
+        height="150"
         image={props.picture_url}
       />
       <CardContent>
@@ -23,13 +23,13 @@ export default function CarCard(props: CarType) {
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {props.description}
-        </Typography>
+        </Typography> <br />
         <Typography variant="body2" color="text.secondary">
-          {props.price}
+          CHF: {props.price}.-
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" href={"/shop/" + props.id}>
+        <Button size="small" href={"/shop/" + props.id} style={{bottom: "10px"}}>
           More
         </Button>
       </CardActions>

@@ -1,39 +1,18 @@
 import { Grid } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CarCard from "../molecules/CarCard/CarCard";
 import Navbar from "../organisms/Navbar/Navbar";
+import CarService from "../service/CarService";
+import { CarType } from "../types/Car.model";
 
 export default function Shop() {
-  const dummyData = [
-    {
-      description: "Test",
-      name: "Test Test",
-      picture_url:
-        "https://images.ichkoche.at/data/image/variations/250x167/1/apfel-img-9270.jpg",
-      price: 120,
-    },
-    {
-      description: "Test",
-      name: "Test Test",
-      picture_url:
-        "https://images.ichkoche.at/data/image/variations/250x167/1/apfel-img-9270.jpg",
-      price: 120,
-    },
-    {
-      description: "Test",
-      name: "Test Test",
-      picture_url:
-        "https://images.ichkoche.at/data/image/variations/250x167/1/apfel-img-9270.jpg",
-      price: 120,
-    },
-    {
-      description: "Test",
-      name: "Test Test",
-      picture_url:
-        "https://images.ichkoche.at/data/image/variations/250x167/1/apfel-img-9270.jpg",
-      price: 120,
-    },
-  ];
+  const [cars, setCars] = useState<CarType[]>([]);
+
+  useEffect(() => {
+    CarService.getCars().then((res) => {
+      setCars(res);
+    });
+  }, []);
 
   return (
     <>
@@ -49,7 +28,7 @@ export default function Shop() {
           paddingRight: "10%",
         }}
       >
-        {dummyData.map((card) => {
+        {cars.map((card) => {
           return (
             <Grid
               item
@@ -58,6 +37,7 @@ export default function Shop() {
               style={{ display: "flex", justifyContent: "center" }}
             >
               <CarCard
+                id={card.id}
                 description={card.description}
                 name={card.name}
                 picture_url={card.picture_url}

@@ -7,7 +7,7 @@ import {
 import AboutUs from "../pages/AboutUs/AboutUs";
 import ContactUs from "../pages/ContactUs";
 import Home from "../pages/Home";
-import ProductDetail from "../pages/ProductDetail";
+import ProductDetail from "../pages/ProductDetail/ProductDetail";
 import Shop from "../pages/Shop";
 import SignIn from "../pages/SignIn";
 import SignUp from "../pages/SignUp";

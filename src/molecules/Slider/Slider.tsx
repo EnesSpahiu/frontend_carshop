@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -11,11 +11,23 @@ import "./SliderStyles.css";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
+import CarService from "../../service/CarService";
+import { CarType } from "../../types/Car.model";
 
 export default function Slider() {
+
+  const [cars, setCars] = useState<CarType[]>();
+
+useEffect(() => {
+  CarService.getCars().then((data) => {
+    setCars(data);
+  });
+}, [])
+
+
   return (
     <>
-      <Swiper
+      {cars && <Swiper
         spaceBetween={10}
         centeredSlides={true}
         autoplay={{
@@ -31,23 +43,23 @@ export default function Slider() {
       >
         <SwiperSlide>
           <img
-            src="https://images.ichkoche.at/data/image/variations/250x167/1/apfel-img-9270.jpg"
-            style={{ width: "400px" }}
+            src={cars[Math.floor(Math.random() * 19)].picture_url}
+            style={{ width: "100%" }}
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://images.ichkoche.at/data/image/variations/250x167/1/apfel-img-9270.jpg"
-            style={{ width: "400px" }}
+            src={cars[Math.floor(Math.random() * 19)].picture_url}
+            style={{ width: "100%" }}
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://images.ichkoche.at/data/image/variations/250x167/1/apfel-img-9270.jpg"
-            style={{ width: "400px" }}
+            src={cars[Math.floor(Math.random() * 19)].picture_url}
+            style={{ width: "100%" }}
           />
         </SwiperSlide>
-      </Swiper>
+      </Swiper>}
     </>
   );
 }
